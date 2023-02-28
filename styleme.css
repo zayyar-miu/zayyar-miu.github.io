@@ -1,0 +1,43 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-top: 0px;
+}
+h1, h3 {
+    color: lightskyblue;
+}
+h2 {
+    color: yellow;
+}
+.container {
+    width: 1090px;
+    margin: auto;
+    background-color: ghostwhite;
+    height: 100vh;
+    margin-bottom: 35px;
+}
+section {
+    padding: 5px 10px 0px 10px;
+}
+.moods-row {
+    display: flex;
+    justify-content: space-between;
+}
+.moods-row div {
+    flex: 1;
+    height: 300px;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mood-okay {
+    background-image: url("./images/okay.png");
+}
+.mood-annoy {
+    background-image: url("./images/annoy.png");
+}
+footer {
+    width: 100%;
+    max-width: 1090px;
+    text-align: right;
+}
