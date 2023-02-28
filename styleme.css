@@ -13,8 +13,7 @@ h2 {
     width: 1090px;
     margin: auto;
     background-color: ghostwhite;
-    height: 100vh;
-    margin-bottom: 35px;
+    padding-bottom: 30px;
 }
 section {
     padding: 5px 10px 0px 10px;
@@ -40,4 +39,13 @@ footer {
     width: 100%;
     max-width: 1090px;
     text-align: right;
+}
+.movies-list li a {
+    text-decoration: none;
+}
+.movies-list li a:hover {
+    text-decoration: underline;
+}
+p:first-letter {
+    font-size: 1.5rem;
 }
