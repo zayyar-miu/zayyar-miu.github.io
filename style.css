@@ -6,6 +6,7 @@ body {
 .container {
     width: 1024px;
     margin: auto;
+    height: 100vh;
     background-color: ghostwhite;
 }
 .cover {
