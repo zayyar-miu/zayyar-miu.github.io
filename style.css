@@ -4,7 +4,7 @@ body {
     font-weight: 300;
 }
 .container {
-    width: 1090px;
+    width: 1024px;
     margin: auto;
     background-color: ghostwhite;
 }
@@ -37,7 +37,7 @@ footer {
     justify-content: space-between;
     bottom: 0;
     width: 100%;
-    max-width: 1090px;
+    max-width: 1024px;
     background-color: #0f0d0b;
     color: #fbc514;
 }

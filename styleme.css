@@ -10,7 +10,7 @@ h2 {
     color: yellow;
 }
 .container {
-    width: 1090px;
+    width: 1024px;
     margin: auto;
     background-color: ghostwhite;
     padding-bottom: 30px;
@@ -37,7 +37,7 @@ section {
 }
 footer {
     width: 100%;
-    max-width: 1090px;
+    max-width: 1024px;
     text-align: right;
 }
 .movies-list li a {
