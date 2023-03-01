@@ -20,11 +20,10 @@ section {
 }
 .moods-row {
     display: flex;
-    justify-content: space-between;
+    height: 300px;
 }
 .moods-row div {
     flex: 1;
-    height: 300px;
     text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
