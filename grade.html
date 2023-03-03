@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve Grade</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-500">
+    <div class="flex items-center justify-center h-screen">
+        <form action="https://mumstudents.org/params.php" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" type="get">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="student_name">
+                    Name:
+                </label>
+                <input name="student_name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="student_name" type="text" placeholder="Student's name">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="student_id">
+                    Student ID:
+                </label>
+                <input name="student_id" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="student_id" type="number" placeholder="Student's ID">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="assignment">
+                    Assignment:
+                </label>
+                <select name="assignment" id="assignment" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    <option value="Lab01">Lab01</option>
+                    <option value="Lab02">Lab02</option>
+                    <option value="Lab03">Lab03</option>
+                    <option value="Lab04">Lab04</option>
+                    <option value="Lab05">Lab05</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="assignment">
+                    Entry:
+                </label>
+                <input type="radio" id="january" name="entry" value="January">
+                <label for="january">January</label><br>
+                <input type="radio" id="april" name="entry" value="April">
+                <label for="april">April</label><br>
+                <input type="radio" id="august" name="entry" value="August">
+                <label for="august">August</label><br>
+                <input type="radio" id="october" name="entry" value="October">
+                <label for="october">October</label>
+            </div>
+            <div class="mb-4">
+                <input type="checkbox" id="verification" name="verification" value="true">
+                <label class="text-gray-700 text-sm font-bold mb-2" for="verification">
+                    I'm looking up my own grade.
+                </label>
+            </div>
+            <div class="flex items-center justify-between">
+                <input type="submit" value="Get Grade!" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
