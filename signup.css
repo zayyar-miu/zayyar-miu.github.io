@@ -1,18 +1,20 @@
 html, body {
     height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11pt;
 }
 body {
     margin: 0;
 }
 .wrapper {
   height: 100%;
-  background: gray;
+  background: #0f0d0b;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .content {
-  background-color: orange;
+  background-color: #fbc514;
   padding: 15px 10px;
   border-radius: 5px;
   width: auto;
