@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <form action="http://mumstudents.org/params.php" method="get">
+                <fieldset>
+                    <legend>New User Signup:</legend>
+                    <div class="mg-b-5">
+                        <label class="label-with-width" for="name">Name:</label>
+                        <input type="text" name="name" id="name" maxlength="16">
+                    </div>
+                    <div class="mg-b-5">
+                        <label class="label-with-width" for="gender">Gender:</label>
+                        <label for="male"><input type="radio" name="gender" id="male" value="male">Male</label>
+                        <label for="female"><input type="radio" name="gender" id="female" value="female" checked>Female</label>
+                    </div>
+                    <div class="mg-b-5">
+                        <label class="label-with-width" for="age">Age:</label>
+                        <input type="text" name="age" id="age" maxlength="2">
+                    </div>
+                    <div class="mg-b-5">
+                        <label class="label-with-width" for="type">Personality type:</label>
+                        <input type="text" name="type" id="type" maxlength="4" pattern="(E|I)(S|N)(T|F)(P|J)" title="Please type personality types such as ENFJ, ISTP">
+                        <a href="https://www.humanmetrics.com/personality/test" target="_blank" rel="noopener noreferrer">(<span>Don't know your type?</span>)</a>
+                    </div>
+                    <div class="mg-b-5">
+                        <label class="label-with-width" for="os">Favorite OS:</label>
+                        <select name="os" id="os">
+                            <option value="Windows" selected>Windows</option>
+                            <option value="Mac">Mac OS X</option>
+                            <option value="Linux">Linux</option>
+                        </select>
+                    </div>
+                    <div class="mg-b-5">
+                        <label class="label-with-width" for="seeking_age">Seeking age:</label>
+                        <input type="text" name="min_age" id="min_age" maxlength="2" placeholder="min">
+                        to
+                        <input type="text" name="max_age" id="max_age" maxlength="2" placeholder="max">
+                    </div>
+                    <div>
+                        <input type="submit" value="Sign up">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
