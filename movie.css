@@ -47,8 +47,7 @@ body {
 #reviews {
     column-count: 2;
     column-gap: 11px;
-    break-before: always;
-    padding: 0 11px;
+    padding: 10px 11px 0 11px;
     font-size: 8pt;
 }
 #reviews p.review-detail {
@@ -59,7 +58,7 @@ body {
     font-weight: bold;
     overflow: hidden;
     clear: left;
-    /* display: inline-block; */
+    margin-block-start: 0px;
 }
 .review-detail img {
     float: left;
@@ -106,4 +105,9 @@ body {
     text-align: center;
     margin: 0;
     padding: 5px 0px;
+}
+.validator-links {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
 }
