@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Timer Exercises</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body class="bg-warning">
+    <div class="container">
+        <div class="row gy-5 py-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">What is the difference between the following 2 statements?</h5>
+                        <h6>setTimeout(booyah, 2000);</h6>
+                        <h6>setTimeout(booyah(), 2000);</h6>
+                        <hr>
+                        <p class="card-text">
+                            <q>setTimeout(booyah, 2000);</q> will wait for the timer and call the booyah function while <q>setTimeout(booyah(), 2000);</q> will instantly call the function without waiting the timer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">What do the following 2 alerts display (answer without running the code)?</h5>
+                        <code>
+                            var myfunc = function(a, x) {
+                                return a * x;
+                                };<br>
+                                var x = myfunc(2, 3);<br>
+                                var y = myfunc;<br>
+                                alert(x);<br>
+                                alert(y(2,3));
+                        </code>
+                        <hr>
+                        <p class="card-text">
+                            6 and 6
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds that says “BOOYAH!”</h5>
+                        <h6>setTimeout(booyah, 2000);</h6>
+                        <h6>setTimeout(booyah(), 2000);</h6>
+                        <hr>
+                        <p class="card-text">
+                            <code>
+                                function booyah1() { alert("BOO!"); }<br>
+                                function booyah2() { setTimeout(function() { alert("BOOYAH!") }, 2000); }<br>
+                            </code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons for using it)?</h5>
+                        <hr>
+                        <p class="card-text">
+                            Unobtrusive Javascript -- separation of content (HTML) and behavior (Javascript)<br>
+                            Without writing Javascript code such as onclick() inside html tag, we use it by putting into a variable which is a DOM object. And we create separate files for Javascript codes just like CSS to make it clean. This is practical application.<br>
+                            Reasons are...
+                            <ol>
+                                <li>We want to split behavior codes(Javascript) into a separate file.</li>
+                                <li>We want our html page to work even if something goes wrong. For example, browser doesn't support Javascript or Javascript code doesn't work on a specific browser.</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
