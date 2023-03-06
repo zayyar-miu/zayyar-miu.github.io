@@ -16,6 +16,8 @@ function changeTextSize() {
         setInterval(function(){
             document.getElementById("lorem").style.fontSize = parseInt(window.getComputedStyle(document.getElementById("lorem"), null).getPropertyValue('font-size')) + 2 + "px";
         }, 500);
+    } else {
+        document.getElementById("lorem").value = "Please type your text here...";
     }
 }
 function changeTextStyle() {
@@ -33,6 +35,8 @@ function changeTextStyle() {
             body.style.backgroundImage = 'none';
             text.style.fontWeight = "normal";
         }
+    } else {
+        document.getElementById("lorem").value = "Please type your text here...";
     }
 }
 function changeTextToPigLatinStyle() {
@@ -52,6 +56,8 @@ function changeTextToPigLatinStyle() {
             pigLatin += result + ' ';
         }
         document.getElementById("lorem").value = pigLatin;
+    } else {
+        document.getElementById("lorem").value = "Please type your text here...";
     }
 }
 function changeTextTMalkovitch() {
@@ -63,5 +69,7 @@ function changeTextTMalkovitch() {
             }
         }
         document.getElementById("lorem").value = words.join(" ");
+    } else {
+        document.getElementById("lorem").value = "Please type your text here...";
     }
 }
