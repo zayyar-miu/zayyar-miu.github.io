@@ -2,14 +2,16 @@ function showAlert() {
     alert("Hello, world!");
 }
 window.onload = function() {
-    let biggerDecorationsButton = document.getElementById("biggerDecorations");
-    biggerDecorationsButton.onclick = changeTextSize;
-    let blingCheckBox = document.getElementById("bling");
-    blingCheckBox.onchange = changeTextStyle;
-    let igpayAtinlayButton = document.getElementById("pig_latin");
-    igpayAtinlayButton.onclick = changeTextToPigLatinStyle;
-    let malkovitchButton = document.getElementById("malkovitch");
-    malkovitchButton.onclick = changeTextTMalkovitch;
+    if(document.getElementById("lorem").value.length > 0) {
+        let biggerDecorationsButton = document.getElementById("biggerDecorations");
+        biggerDecorationsButton.onclick = changeTextSize;
+        let blingCheckBox = document.getElementById("bling");
+        blingCheckBox.onchange = changeTextStyle;
+        let igpayAtinlayButton = document.getElementById("pig_latin");
+        igpayAtinlayButton.onclick = changeTextToPigLatinStyle;
+        let malkovitchButton = document.getElementById("malkovitch");
+        malkovitchButton.onclick = changeTextTMalkovitch;
+    }
 }
 function changeTextSize() {
     setInterval(function(){
