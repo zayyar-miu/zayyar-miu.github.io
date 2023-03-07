@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Quiz 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body class="bg-warning">
+    <div class="container">
+        <div class="row gy-5 py-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">In jQuery terminology, what is the difference between the “jQuery function” and the “jQuery object”?</h5>
+                        <hr>
+                        <p class="card-text">
+                            <q>$</q> or <q>jQuery</q> is globally avaliable jQuery function. With this, we can create jQuery object. <q>jQuery object</q> is a collection of HTML tags that have been selected by the jQuery function. From this object, we can do different things such as hiding or changing background color or making font size bigger, etc.<br>
+                            <code>var paragraphs = $('p');</code> Here, $ is a jQuery function and by passing p tag, paragraphs become jQuery object containing p elements inside the page.<br>
+                            <code>paragraphs.hide();</code> Here, from paragraphs jQuery object, we can use hide method to hide all p elements from the page.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Write jQuery code to find all h1 elements that are children of a div element and make their background color red.</h5>
+                            <code>
+                                &lt;body&gt;<br>
+                                    &lt;h1&gt;abc&lt;/h1&gt;<br>
+                                    &lt;div&gt;&lt;br&gt;<br>
+                                        &lt;h1&gt;div-1&lt;/h1&gt;<br>
+                                        &lt;h1&gt;div-2&lt;/h1&gt;<br>
+                                    &lt;/div&gt;<br>
+                                    &lt;h1&gt;xyz&lt;/h1&gt;<br>
+                                &lt;/body&gt;
+                            </code>
+                        <hr>
+                        <p class="card-text">
+                            <code>$(document).ready(function(){ $("div h1").css("background-color", "red"); });</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Use a jQuery method to insert the text "YES!" at the end of the &lt;p&gt; element.</h5>
+                        <code>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html&gt;<br>
+                            &lt;head&gt;<br>
+                                &lt;script&gt;<br>
+                                    INSERT YOUR JQUERY CODE HERE<br>
+                                &lt;/script&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                                &lt;p&gt;Is jQuery FUN or what? &lt;/p&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;<br>
+                        </code>
+                        <hr>
+                        <p class="card-text">
+                            <code>$(document).ready(function(){ $("p").append("YES"); });</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
