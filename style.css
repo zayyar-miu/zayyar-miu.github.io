@@ -6,7 +6,6 @@ body {
 .container {
     width: 1024px;
     margin: auto;
-    height: 100vh;
     background-color: ghostwhite;
 }
 .cover {
@@ -24,17 +23,18 @@ body {
 }
 .content {
     padding-left: 5px;
-    height: auto;
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
     padding-bottom: 20px;
+    background-color: ghostwhite;
 }
 .content > ul li a {
     text-decoration: none;
 }
 footer {
     display: flex;
-    position: fixed;
+    /* position: fixed; */
     justify-content: space-between;
     bottom: 0;
     width: 100%;
