@@ -19,6 +19,7 @@ $(document).ready(function(){
         if(timer != 'undefined') {
             // clear timer
             clearInterval(timer);
+            timer = 'undefined';
             // put back original text
             setTimeout(function() { 
                 $('textarea#mytextarea').val(ANIMATIONS[animation]);
@@ -40,8 +41,8 @@ $(document).ready(function(){
     });
     // when toggling speed checkbox
     $("input#speed").change(function() {
+        speed = this.checked ? 50 : 250;
         if(timer != 'undefined') {
-            speed = this.checked ? 50 : 250;
             // clear timer
             clearInterval(timer);
             // restart animation
