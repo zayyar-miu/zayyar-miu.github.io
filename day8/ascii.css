@@ -1,0 +1,23 @@
+body {
+    background-color: #CCCCFF;
+    font-family: sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    text-align: center;
+}
+h1 {
+    font-size: 32pt;
+}
+textarea {
+    width: 90%;
+    height: 400px;
+    font-family: monospace;
+    font-size: 12pt;
+}
+fieldset {
+    border: 5px solid black;
+    display: inline;
+}
+.footer {
+    text-align: right;
+}
