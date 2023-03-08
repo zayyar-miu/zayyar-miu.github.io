@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Quiz2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body class="bg-warning">
+    <div class="container">
+        <div class="row gy-5 py-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Which, if any, of the following 3 code fragments are equivalent? Explain why they are different, if they are. Explain why they can have different parameters and be equivalent, if they are equivalent.</h5>
+                        <code>
+                            //code fragment 1<br>
+                            $("li").each(function(idx, e) {<br>
+                            $(e).css(“color”, “yellow”); })<br><br>
+
+                            //code fragment 2<br>
+                            $("li").each(function() {<br>
+                            $(this).css(“color”, “yellow”); })<br><br>
+
+                            //code fragment 3<br>
+                            $("li").each(function(idx) {<br>
+                            $(this).css(“color”, “yellow”); })<br>
+                        </code>
+                        <hr>
+                        <p class="card-text">
+                            All three code fragments are equivalent, and they all achieve the same result of changing the color of all &lt;li&gt; elements to yellow.<br>
+                            The key difference between the three code fragments is the number of parameters passed to the callback function of the .each() method:<br><br>
+                            Code fragment 1 passes two parameters to the callback function: the index of the current element and the current element itself.<br>
+                            Code fragment 2 does not pass any parameters to the callback function. Instead, it uses the this keyword to refer to the current element.<br>
+                            Code fragment 3 passes one parameter to the callback function: the index of the current element.<br>
+                            In terms of functionality, all three code fragments accomplish the same thing, but the choice of which code fragment to use depends on the specific needs of the situation.<br><br>
+                            For example, if the index of the current element is needed inside the callback function, then code fragment 1 would be the appropriate choice. On the other hand, if only the element itself is needed, then code fragment 2 or 3 could be used instead.<br><br>
+                            Overall, it's important to understand the differences between these code fragments and choose the one that best fits the specific requirements of the code.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Write a jQuery expression to find all divs on a page that include an unordered list in them, and make their text color be blue.</h5>
+                            <code>
+                                &lt;div&gt;no ul here &lt;/div&gt;<br>
+                                &lt;div&gt;<br>
+                                This does contain a ul.<br>
+                                &lt;ul&gt;<br>
+                                &lt;li&gt;the first item&lt;/li&gt;<br>
+                                &lt;li&gt;the second item&lt;/li&gt;<br>
+                                &lt;/ul&gt;<br>
+                                &lt;/div&gt;<br>
+                                &lt;script&gt;<br>
+                                &lt;!—INSERT YOUR JQUERY CODE HERE - - &gt;<br>
+                                &lt;/script&gt;
+                            </code>
+                        <hr>
+                        <p class="card-text">
+                            <code>$("ul").parent("div").css("color","blue");</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Write jQuery code to append the following div element (and all of its contents) dynamically to the body element.</h5>
+                        <code>
+                            &lt;div&gt;&lt;h1&gt;JQuery Core&lt;/h1&gt;&lt;/div&gt;<br><br>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html&gt;<br>
+                            &lt;head&gt;<br>
+                            &lt;meta charset="utf-8"&gt;<br>
+                            &lt;title&gt;JS Bin&lt;/title&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </code>
+                        <hr>
+                        <p class="card-text">
+                            <code>var tag = "&lt;div&gt;&lt;h1&gt;JQuery Core&lt;/h1&gt;&lt;/div&gt;"; <br> $("body").append(tag);</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
