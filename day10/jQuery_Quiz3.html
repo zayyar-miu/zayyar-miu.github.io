@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Quiz 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body class="bg-warning">
+    <div class="container">
+        <div class="row gy-5 py-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Find the text in the first paragraph (stripping out the html), then set the html of the last paragraph to show it is just text (the red bold is gone).</h5>
+                        <code><pre>
+                            &lt;!doctype html&gt;<br>
+                            &lt;html lang="en"&gt;<br>
+                            &lt;head&gt;<br>
+                            &lt;meta charset="utf-8"&gt;<br>
+                            &lt;title&gt;text demo&lt;/title&gt;<br>
+                            &lt;style&gt;<br>
+                            p {<br>
+                            color: blue;<br>
+                            margin: 8px;<br>
+                            }<br>
+                            span {<br>
+                            color: red;<br>
+                            }<br>
+                            &lt;/style&gt;<br>
+                            &lt;script src="http://code.jquery.com/jquery-1.9.1.js"&gt;&lt;/script&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                                &lt;p&gt;&lt;span&gt;Test&lt;/span&gt; Paragraph.&lt;/p&gt;<br>
+                                &lt;p&gt;&lt;/p&gt;<br>
+                            &lt;script&gt;<br><br>
+                            &lt;!—INSERT YOUR JQUERY CODE HERE - - &gt;<br><br>
+                            &lt;/script&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </pre></code>
+                        <hr>
+                        <p class="card-text">
+                            <code>$(document).ready(function(){ $("p:last").text($("p:first").text()); });</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Write jQuery code to create a red background for the level-2 list items.</h5>
+                            <code><pre>
+                                &lt;ul class="level-1"&gt;<br>
+                                    &lt;li class="item-i"&gt;I&lt;/li&gt;<br>
+                                    &lt;li class="item-ii"&gt;II<br>
+                                        &lt;ul class="level-2"&gt;<br>
+                                            &lt;li class="item-a"&gt;A&lt;/li&gt;<br>
+                                            &lt;li class="item-b"&gt;B<br>
+                                                &lt;ul class="level-3"&gt;<br>
+                                                    &lt;li class="item-1"&gt;1&lt;/li&gt;<br>
+                                                    &lt;li class="item-2"&gt;2&lt;/li&gt;<br>
+                                                    &lt;li class="item-3"&gt;3&lt;/li&gt;<br>
+                                                &lt;/ul&gt;<br>
+                                            &lt;/li&gt;<br>
+                                            &lt;li class="item-c"&gt;C&lt;/li&gt;<br>
+                                        &lt;/ul&gt;<br>
+                                    &lt;/li&gt;<br>
+                                    &lt;li class="item-iii"&gt;III&lt;/li&gt;<br>
+                                &lt;/ul&gt;
+                            </pre></code>
+                        <hr>
+                        <p class="card-text">
+                            <code>$(document).ready(function(){ $(".level-2").children("li").css("background-color", "red"); });</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Write jQuery code to select the element that comes immediately before item three and change its background color to blue.</h5>
+                        <code><pre>
+                            &lt;ul&gt;
+                                &lt;li&gt;list item 1&lt;/li&gt;
+                                &lt;li&gt;list item 2&lt;/li&gt;
+                                &lt;li class="third-item"&gt;list item 3&lt;/li&gt;
+                                &lt;li&gt;list item 4&lt;/li&gt;
+                                &lt;li&gt;list item 5&lt;/li&gt;
+                            &lt;/ul&gt;
+                        </pre></code>
+                        <hr>
+                        <p class="card-text">
+                            <code>$(document).ready(function() { $(".third-item").prev().css("background-color", "blue"); });</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Let's add one additional requirement for the "Go Vegetarian" button of the Webville Eatery Menu
+                            described in Chapter 4 of Head First jQuery: "Turkey" in the ingredient list of any entree is replaced by
+                            "Mashed Potatoes" in the vegetarian version. You may assume there is a class "turkey" that identifies
+                            these items in the list. Describe the changes to the Javascript (jQuery) code to implement this new
+                            requirement.</h5>
+                        <hr>
+                        <p class="card-text">
+                            <code>$(document).ready(function(){ $(".turkey").replaceWith("&lt;li class='mashed'&gt;&lt;em&gt;Mashed Potatoes&lt;/em&gt;&lt;/li&gt;"); });</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Write Javascript (jQuery) code to change the color of the parent and grandparent list items of the span
+                            of text ("some text") in the following to green.</h5>
+                        <code><pre>
+                            &lt;!DOCTYPE html&gt;
+                            &lt;html&gt;
+                            &lt;head&gt;
+                            &lt;script&gt;
+                            $(document).ready(function(){
+                            &lt;!—INSERT YOUR JQUERY CODE HERE - - &gt;
+                            });
+                            &lt;/script&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                            &lt;div class="ancestors"&gt;
+                                &lt;div&gt; (great-grandparent)
+                                    &lt;ul&gt; (grandparent)
+                                        &lt;li&gt; (direct parent)
+                                        &lt;span&gt;some text&lt;/span&gt;
+                                        &lt;/li&gt;
+                                    &lt;/ul&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;/body&gt;
+                            &lt;/html&gt;
+                        </pre></code>
+                        <hr>
+                        <p class="card-text">
+                            <code>$(document).ready(function(){ $("span").parents().css("color", "red"); });</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
