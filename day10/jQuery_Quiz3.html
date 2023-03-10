@@ -142,7 +142,11 @@
                         </pre></code>
                         <hr>
                         <p class="card-text">
-                            <code>$(document).ready(function(){ $("span").parents().css("color", "red"); });</code>
+                            <code>
+                                $(document).ready(function(){
+                                    $("span").parent().css("color", "green"); 
+                                    $("span").parent().parent().css("color", "green"); 
+                                });</code>
                         </p>
                     </div>
                 </div>

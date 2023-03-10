@@ -60,7 +60,10 @@
                             </code>
                         <hr>
                         <p class="card-text">
-                            <code>$("ul").parent("div").css("color","blue");</code>
+                            <code>
+                                <!-- $("ul").parent("div").css("color","blue"); -->
+                                $("div").has("ul").css("color", "blue");
+                            </code>
                         </p>
                     </div>
                 </div>
