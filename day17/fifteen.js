@@ -26,19 +26,15 @@ $(document).ready(function() {
 
     $("#puzzlearea div").hover(
         function(){
-            if (isMoveable($(this).innerHTML)) $(this).addClass("movablepiece");
+            if (isMoveable($(this).text())) $(this).addClass("movablepiece");
         }, function(){
-            if (isMoveable($(this).innerHTML)) $(this).removeClass("movablepiece");
+            if (isMoveable($(this).text())) $(this).removeClass("movablepiece");
         }
     );
 
     $("#puzzlearea div").click(function() {
-        if(isMoveable($(this).innerHTML)) {
-            let left = leftValue($(this));
-            let top = topValue($(this));
-            $(this).css({"left": emptyL+"px", "top": emptyT+"px"});
-            emptyL = left;
-            emptyT = top;
+        if(isMoveable($(this).text())) {
+            swap($(this).text() - 1);
         }
     });
 
