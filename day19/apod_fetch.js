@@ -3,8 +3,8 @@ $(document).ready(function () {
 });
 
 const url = 'https://api.nasa.gov/planetary/apod?';
-async function getPicture () {
-    await fetch(url+ new URLSearchParams({
+function getPicture () {
+    fetch(url+ new URLSearchParams({
             api_key: "DEMO_KEY",
             date: $("#date").val() 
         }), {
